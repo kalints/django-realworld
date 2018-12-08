@@ -19,3 +19,7 @@ execute "install-prereq" do
     action :run
 end
 
+execute "install-python3" do
+    command "sudo apt-get install -y python3"
+    action :run
+end
