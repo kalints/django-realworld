@@ -5,12 +5,6 @@
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
 
-unless os.windows?
-  describe user('root') do
-    it { should exist }
-  end
-end
-
 describe file('/home/vagrant/.bash_profile') do
   its('content') { should match 'PYENV_ROOT' }
   its('content') { should match 'PATH' }
