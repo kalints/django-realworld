@@ -13,7 +13,17 @@ cookbook_file '/home/vagrant/.bash_profile' do
 end
 
 git '/home/vagrant/.pyenv' do
+    user 'vagrant'
+    group 'vagrant'
     repository 'https://github.com/pyenv/pyenv.git'
     revision 'master'
     action :sync
+end
+
+execute "pyenv-install-3.5.2" do
+    user 'vagrant'
+    group 'vagrant'
+    not_if { ::File.exist?('/home/vagrant/.pyenv/versions/3.5.2') }
+    command ". /home/vagrant/.bash_profile && pyenv install 3.5.2"
+    action :run
 end
