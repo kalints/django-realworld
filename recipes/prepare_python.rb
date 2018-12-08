@@ -47,3 +47,11 @@ file '/home/vagrant/.python-version' do
     group 'vagrant'
     content 'productionready'
 end
+
+execute "pyenv-install-3.5.2" do
+    user 'vagrant'
+    group 'vagrant'
+    not_if { ::File.exist?('/home/vagrant/.pyenv/versions/productionready') }
+    command ". /home/vagrant/.bash_profile && pyenv rehash"
+    action :run
+end
