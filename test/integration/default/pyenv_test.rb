@@ -14,7 +14,3 @@ end
 describe file('/home/vagrant/.python-version') do
   its('content') { should match 'productionready' }
 end
-
-describe command('bash -c "source ~/.bash_profile && pyenv activate"') do
-  its('exit_status') { should eq 0 }
-end
