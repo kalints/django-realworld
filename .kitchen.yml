@@ -18,6 +18,7 @@ platforms:
 suites:
   - name: default
     run_list:
+      - recipe[django-realworld::install_packages]
       - recipe[django-realworld::pyenv]
       - recipe[django-realworld::app]
     # verifier:
