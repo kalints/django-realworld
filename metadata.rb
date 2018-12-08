@@ -1,6 +1,6 @@
 name 'django-realworld'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Kalin Staykov'
+maintainer_email 'k.t.staykov@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures django-realworld'
 long_description 'Installs/Configures django-realworld'
