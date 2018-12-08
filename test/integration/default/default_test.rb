@@ -22,6 +22,5 @@ describe file('/home/vagrant/.python-version') do
 end
 
 describe command('bash -c "source ~/.bash_profile && pyenv activate"') do
-  # it { should exist }
   its('exit_status') { should eq 0 }
 end
