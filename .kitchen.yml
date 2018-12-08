@@ -19,6 +19,7 @@ suites:
   - name: default
     run_list:
       - recipe[django-realworld::install_python]
+      - recipe[django-realworld::install_pyenv]
     # verifier:
     #   inspec_tests:
     #     - test/integration/default
