@@ -14,3 +14,12 @@ ruby_block 'breakpoint' do
     end
 end
 ```
+
+## Run the Django app
+
+Once the recipes execute you can run the app in the following way:
+
+```
+cd django-realworld-example-app
+python manage.py runserver 0:8000
+```
