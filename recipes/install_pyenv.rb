@@ -12,7 +12,8 @@ cookbook_file '/home/vagrant/.bash_profile' do
     action :create
 end
 
-execute "install-pyenv" do
-    command "git clone https://github.com/pyenv/pyenv.git ~/.pyenv"
-    action :run
+git '/home/vagrant/.pyenv' do
+    repository 'https://github.com/pyenv/pyenv.git'
+    revision 'master'
+    action :sync
 end
