@@ -18,7 +18,8 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[django-realworld::prepare_python]
+      - recipe[django-realworld::pyenv]
+      - recipe[django-realworld::app]
     # verifier:
     #   inspec_tests:
     #     - test/integration/default
