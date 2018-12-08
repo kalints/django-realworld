@@ -6,13 +6,13 @@
 # found at http://inspec.io/docs/reference/resources/
 
 unless os.windows?
-  # This is an example test, replace with your own test.
-  describe user('root'), :skip do
+  describe user('root') do
     it { should exist }
   end
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+describe file('/home/vagrant/.bash_profile') do
+  its('content') { should match 'PYENV_ROOT' }
+  its('content') { should match 'PATH' }
+  its('content') { should match 'pyenv init' }
 end
