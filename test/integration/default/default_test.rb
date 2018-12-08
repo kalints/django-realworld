@@ -16,3 +16,12 @@ describe file('/home/vagrant/.bash_profile') do
   its('content') { should match 'PATH' }
   its('content') { should match 'pyenv init' }
 end
+
+describe file('/home/vagrant/.python-version') do
+  its('content') { should match 'productionready' }
+end
+
+describe command('bash -c "source ~/.bash_profile && pyenv activate"') do
+  # it { should exist }
+  its('exit_status') { should eq 0 }
+end
