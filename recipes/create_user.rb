@@ -1,6 +1,6 @@
 #
 # Cookbook:: django-realworld
-# Recipe:: install_app
+# Recipe:: create_user
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 

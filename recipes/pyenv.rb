@@ -1,6 +1,6 @@
 #
 # Cookbook:: django-realworld
-# Recipe:: install_pyenv
+# Recipe:: pyenv
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 

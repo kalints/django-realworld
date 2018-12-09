@@ -1,6 +1,6 @@
 #
 # Cookbook:: django-realworld
-# Recipe:: install_app
+# Recipe:: install_packages
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
