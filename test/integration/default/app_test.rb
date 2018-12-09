@@ -12,7 +12,6 @@ describe file('/home/django/django-realworld-example-app/.git') do
     it { should be_grouped_into 'django' }
 end
 
-describe command('bash -c "source ~/.bash_profile && pyenv activate && python -m django --version"') do
-    its('exit_status') { should eq 0 }
-    its('stdout') { should match (/1.10.5/) }
+describe file('/home/django/.pyenv/versions/productionready/lib/python3.5/site-packages/Django-1.10.5.dist-info') do
+    it { should exist }
 end
